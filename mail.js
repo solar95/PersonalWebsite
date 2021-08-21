@@ -22,10 +22,17 @@ function sendEmail(e) {
              return;
          }
 
+
+
     var name = $("#contactName").val();
     var email = $("#contactEmail").val();
     var subject = $("#contactSubject").val();
     var desc = $("#contactMessage").val();
+
+    if(desc.length <= 20){
+      alert("Message to short")
+      return;
+    }
 
 
     console.log("Parametro: ", name);
